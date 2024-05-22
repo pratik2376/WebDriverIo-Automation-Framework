@@ -1,17 +1,18 @@
 const LoginPageLocator = require('../elements/login-page-locators');
+const Utils = require('../../../utils/wdio.utils');
 
 class LoginPageMethods{
     async login(username, password){
-        await LoginPageLocator.username.setValue(username)
-        await LoginPageLocator.password.setValue(password)
-        await LoginPageLocator.loginButton.click()
+        await Utils.setInputValue(LoginPageLocator.username,username)
+        await Utils.setInputValue(LoginPageLocator.password,password)
+        await Utils.clickElement(LoginPageLocator.loginButton)
     }
     async checkLoginMessage(message){
-        await expect(LoginPageLocator.messageBox).toHaveTextContaining(message)
+        await Utils.isTextPresentInUI(LoginPageLocator.messageBox,message)
     }
     
-    async Navigate(url){
-        await browser.url(url)
+    async NavigateToApplication(url){
+        await Utils.navigateToURL(url)
     }
 }
 module.exports = new LoginPageMethods();
