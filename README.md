@@ -49,3 +49,6 @@ Run specific tests npx wdio run wdio.conf.js --spec test1.js
 5. Run commands
  allure generate allure-results // this will generate allure-report folder
  allure open     // will start server and open report
+
+ ### Note:- To run, generate report and to view report in browser you can use below command:-
+ npm run wdio

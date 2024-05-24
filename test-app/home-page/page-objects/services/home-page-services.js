@@ -1,5 +1,5 @@
 const HomePageMethods = require('../methods/home-page-methods');
-const { MESSAGE } = require('../../common/login-page-locale-constants')
+const { MESSAGE } = require('../../common/home-page-locale-constants')
 
 class HomePageServices{
     async verifyHomePageWelcomeMessage(){
