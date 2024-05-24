@@ -12,12 +12,13 @@ This repository contains automated tests for the browser based application using
 
 - **We can use WebdriverIO to automate**:
     
-   modern web applications written in React, Vue, Angular etc
-   hybrid or native mobile apps running on emulator/simulator or real device
-   native desktop applications (e.g. written with Electron.js)
-   Can work with Shadow DOM and React Objects
+   1. modern web applications written in React, Vue, Angular etc
+   2. hybrid or native mobile apps running on emulator/simulator or real device
+   3. Native desktop applications (e.g. written with Electron.js)
+   4. Can work with Shadow DOM and React Objects
 
 - **Added ES Lint check to the repo**: 
+   
    ESLint is an essential tool for JavaScript developers, providing valuable support for code quality, consistency, and maintainability throughout the development lifecycle. It helps teams write better code, collaborate more effectively, and deliver higher-quality software products.
 
    For lint check use command:- npm run lint
@@ -26,7 +27,8 @@ This repository contains automated tests for the browser based application using
 
    Allure reporting enhances test automation efforts by providing insightful and interactive reports that facilitate better decision-making, troubleshooting, and collaboration among team members. It's widely adopted in the software testing community for its usability, flexibility, and rich feature set.
 
-   To generate and open allure report use command:- 
+   To generate and open allure report use command:-                                 
+   
    allure generate allure-results --clean --output allure-report && allure open 
 
 ## Hardware & Software Requirements
@@ -39,10 +41,9 @@ This repository contains automated tests for the browser based application using
 
 ## Project Setup & WebdriverIO Installation
 1. Create a new folder and open in IDE (VS Code)
-2. Open terminal in VS Code and run commands  npm init -y
-               npm init wdio
+2. Open terminal in VS Code and run commands  npm init -y, npm init wdio
 3. Select the options as required and install
-4. Check WebdriverIO version  npm ls webdriverio
+4. Check WebdriverIO version - npm ls webdriverio
 5. Check wdio.conf.js file and project folders are created
 6. To run existing tests:- 
 
@@ -62,7 +63,7 @@ This repository contains automated tests for the browser based application using
    allure generate allure-results // this will generate allure-report folder
    allure open  // will start server and open report
 
- - **Note** 
+## Execution
    For ESlint check and to run test cases also to generate report and to view report in browser you can use below command:-
    
    - **npm run wdio** 
