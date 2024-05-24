@@ -8,8 +8,5 @@ class LoginPageLocators {
     get loginButton(){
         return  $('button[type="submit"]')
     }
-    get messageBox(){
-        return $('#flash')
-    }
 }
 module.exports = new LoginPageLocators();

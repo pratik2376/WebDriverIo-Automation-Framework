@@ -1,12 +1,10 @@
 const LoginPageMethod = require('../methods/login-page-methods');
-const { USERNAME, PASSWORD, URL } = require('../../e2e/data/login-page-data');
-const { MESSAGE } = require('../../common/login-page-locale-constants')
+const { USERNAME, PASSWORD, URL } = require('../../../data/login-page-data');
 
 class LoginPageServices{
-    async verifyLoginFunctionality(){
+    async LoginToApplication(){
         await LoginPageMethod.NavigateToApplication(URL)
         await LoginPageMethod.login(USERNAME,PASSWORD)
-        await LoginPageMethod.checkLoginMessage(MESSAGE)
     }   
 
 }
