@@ -78,7 +78,7 @@ class Utils {
           throw new Error(`Message "${text}" not found in the UI`);
         };
       } catch (error) {
-        throw new Error('Failed to verify messages in the UI'); // Element not found or text not present
+        throw new Error('Failed to verify messages in the UI'+error); // Element not found or text not present
       }
     }
   
