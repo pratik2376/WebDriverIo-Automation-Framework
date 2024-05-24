@@ -8,7 +8,7 @@ This repository contains automated tests for the browser based application using
 2. Free & Open-source.
 3. owned by a non-profit entity called OpenJS Foundation.
 
-## Features
+## Features of this framework:- 
 
 - **We can use WebdriverIO to automate**:
     
@@ -16,6 +16,18 @@ This repository contains automated tests for the browser based application using
 2. hybrid or native mobile apps running on emulator/simulator or real device
 3. native desktop applications (e.g. written with Electron.js)
    Can work with Shadow DOM and React Objects
+
+- **Added ES Lint check to the repo**:
+ESLint is an essential tool for JavaScript developers, providing valuable support for code quality, consistency, and maintainability throughout the development lifecycle. It helps teams write better code, collaborate more effectively, and deliver higher-quality software products.
+
+For lint check use command:- npm run lint
+
+- **Added Allure reporting**:
+
+Allure reporting enhances test automation efforts by providing insightful and interactive reports that facilitate better decision-making, troubleshooting, and collaboration among team members. It's widely adopted in the software testing community for its usability, flexibility, and rich feature set.
+
+To generate and open allure rport use command:- 
+allure generate allure-results --clean --output allure-report && allure open 
 
 ## Hardware & Software Requirements
 1. Hardware
@@ -50,5 +62,5 @@ Run specific tests npx wdio run wdio.conf.js --spec test1.js
  allure generate allure-results // this will generate allure-report folder
  allure open     // will start server and open report
 
- ### Note:- To run, generate report and to view report in browser you can use below command:-
+ ### Note:- For ESlint check and to run test cases also to generate report and to view report in browser you can use below command:-
  npm run wdio
