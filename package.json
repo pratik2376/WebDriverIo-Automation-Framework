@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "wdio": "npm run lint && wdio run ./wdio.conf.js && allure generate allure-results --clean --output allure-report && allure open"
+    "wdio": "npm run lint && wdio run ./wdio.conf.js && allure generate allure-results --clean --output allure-report && allure open",
+    "regression": "npm run lint && wdio run ./wdio.conf.js --mochaOpts.grep='@Regression' && allure generate allure-results --clean --output allure-report && allure open",
+    "sanity": "npm run lint && wdio run ./wdio.conf.js --mochaOpts.grep='@Sanity' && allure generate allure-results --clean --output allure-report && allure open"
+
+
   },
   "keywords": [],
   "author": "",

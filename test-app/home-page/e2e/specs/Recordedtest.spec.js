@@ -1,5 +1,5 @@
 describe("Demo", () => {
-  it("tests Demo", async () => {
+  it("tests Demo @Regression", async () => {
     await browser.setWindowSize(811, 607)
     await browser.url("https://the-internet.herokuapp.com/login")
     await expect(browser).toHaveUrl("https://the-internet.herokuapp.com/login")

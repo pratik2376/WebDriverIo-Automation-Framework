@@ -31,6 +31,20 @@ This repository contains automated tests for the browser based application using
    
    allure generate allure-results --clean --output allure-report && allure open 
 
+- **Run test cases based on tags**:
+
+
+   1. Functional Areas: Tag tests based on the feature or functionality they cover.
+   2. Test Types: Tag tests as smoke, regression, or sanity tests to categorize them based on their       
+      purpose.
+   3. Environments: Tag tests for specific environments like "dev," "staging," or "production."
+   4. Selective Execution: Run subsets of tests based on specific criteria, reducing test execution time.
+   5. Test Organization: Organize tests into logical groups, making it easier to manage and maintain the 
+      test suite.
+
+      Eg:- To Run Sanity test cases use command:- npm run sanity
+           To Run regression test cases use command:- npm run regression
+
 ## Hardware & Software Requirements
 1. Hardware
 2. Desktop or Laptop with min 4GB RAM, 5 GB free space
