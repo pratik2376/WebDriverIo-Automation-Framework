@@ -44,6 +44,7 @@ This repository contains automated tests for the browser based application using
 
       Eg:- To Run Sanity test cases use command:- npm run sanity
            
+           
            To Run regression test cases use command:- npm run regression
 
 ## Hardware & Software Requirements
