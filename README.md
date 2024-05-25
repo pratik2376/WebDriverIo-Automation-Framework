@@ -42,9 +42,9 @@ This repository contains automated tests for the browser based application using
    5. Test Organization: Organize tests into logical groups, making it easier to manage and maintain the 
       test suite.
 
-      Eg:- To Run Sanity test cases use command:- npm run sanity
-           
-           To Run regression test cases use command:- npm run regression
+      Example:-  
+      To Run Sanity test cases use command:- npm run sanity
+      To Run regression test cases use command:- npm run regression
 
 ## Hardware & Software Requirements
 1. Hardware
