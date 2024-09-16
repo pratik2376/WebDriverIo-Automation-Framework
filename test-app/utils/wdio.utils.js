@@ -81,6 +81,51 @@ class Utils {
         throw new Error('Failed to verify messages in the UI'+error); // Element not found or text not present
       }
     }
+      /**
+     * Switches to an iframe by its selector or WebElement.
+     * @param {WebdriverIO.Element} element selectorOrElement - CSS selector or iframe WebElement.
+     */
+    async switchToFrame(element) {
+      let iframeElement;
+      if (typeof element === 'string') {
+        // If a string is passed, treat it as a CSS selector or XPath
+        iframeElement = await $(element);
+      await browser.switchToFrame(iframeElement);
+      }
+      else{
+        await browser.switchToFrame(element)
+      }
+    }
+
+  /**
+ * Switches back to the parent frame.
+ */
+async switchToParentFrame() {
+  await browser.switchToParentFrame();
+}
+
+/**
+ * Switches to a new window and performs a given action.
+ * @param {Function} action - A callback function that performs actions in the new window.
+ */
+async switchToNewWindow(action) {
+  // Get the original window handle
+  const originalWindowHandle = await browser.getWindowHandle();
+  
+  // Get all window handles
+  const handles = await browser.getWindowHandles();
+  
+  // Switch to the new window
+  const newWindowHandle = handles.find(handle => handle !== originalWindowHandle);
+  await browser.switchToWindow(newWindowHandle);
+  
+  // Perform the action in the new window
+  await action();
+  
+  // Close the new window and switch back to the original window
+  await browser.closeWindow();
+  await browser.switchToWindow(originalWindowHandle);
+}
   
   }
   module.exports = new Utils();

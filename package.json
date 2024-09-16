@@ -4,13 +4,11 @@
   "description": "This repository contains automated tests for the browser based application using the WebdriverIO UI Automation Framework.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint && wdio run ./wdio.conf.js --mochaOpts.grep='@Test' && allure generate allure-results --clean --output allure-report && allure open",
     "lint": "eslint .",
     "wdio": "npm run lint && wdio run ./wdio.conf.js && allure generate allure-results --clean --output allure-report && allure open",
     "regression": "npm run lint && wdio run ./wdio.conf.js --mochaOpts.grep='@Regression' && allure generate allure-results --clean --output allure-report && allure open",
     "sanity": "npm run lint && wdio run ./wdio.conf.js --mochaOpts.grep='@Sanity' && allure generate allure-results --clean --output allure-report && allure open"
-
-
   },
   "keywords": [],
   "author": "",
@@ -26,5 +24,9 @@
     "allure-commandline": "^2.29.0",
     "eslint": "^9.3.0",
     "globals": "^15.3.0"
+  },
+  "dependencies": {
+    "chai": "^5.1.1",
+    "dotenv": "^16.4.5"
   }
 }

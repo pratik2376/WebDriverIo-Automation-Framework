@@ -1,11 +1,14 @@
-const LoginPageMethod = require('../methods/login-page-methods');
-const { USERNAME, PASSWORD, URL } = require('../../../data/login-page-data');
+const LoginPageMethod = require('../methods/login-page-methods')
 
 class LoginPageServices{
     async LoginToApplication(){
-        await LoginPageMethod.NavigateToApplication(URL)
-        await LoginPageMethod.login(USERNAME,PASSWORD)
+        await LoginPageMethod.NavigateToApplication(process.env.INTERNET_URL)
+        await LoginPageMethod.login(process.env.INTERNET_USERNAME,process.env.INTERNET_PASSWORD)
     }   
+
+    async NavigateToApp(url){
+        await LoginPageMethod.NavigateToApplication(url)
+    }
 
 }
 module.exports = new LoginPageServices();

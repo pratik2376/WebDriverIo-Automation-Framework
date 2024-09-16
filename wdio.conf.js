@@ -1,4 +1,9 @@
+const path = require('path'); 
+const downloadDir = path.resolve(__dirname, 'test-app/downloads');
+require('dotenv').config(); // Load environment variables
 exports.config = {
+
+    
     //
     // ====================
     // Runner Configuration
@@ -49,8 +54,21 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
+    
+    
     capabilities: [{
-        browserName: 'chrome'
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+                    prefs: {
+                        'download.default_directory': downloadDir,
+                        'download.prompt_for_download': false,
+                        'download.directory_upgrade': true,
+                        'safebrowsing.enabled': true,
+                        // disable ads
+                        // Disable images (can reduce some ads)
+                       
+                    }
+        },
     }],
 
     //
